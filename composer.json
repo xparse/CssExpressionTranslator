@@ -17,9 +17,6 @@
     "xparse/expression-translator": "0.0.2",
     "symfony/css-selector": "^3.0"
   },
-  "require-dev": {
-    "phpunit/phpunit": "4.*"
-  },
   "autoload": {
     "psr-4": {
       "Xparse\\CssExpressionTranslator\\": "src"
