@@ -15,6 +15,24 @@ Via Composer
 composer require xparse/css-expression-translator
 ```
 
+## Usage
+
+``` php
+$translator = new CssExpressionTranslator();
+echo $translator->toXpath('a');
+```
+
+## Testing
+
+``` bash
+    ./vendor/bin/phpunit
+```
+
+## Contributing
+
+Please see [CONTRIBUTING](https://github.com/Xparse/CssExpressionTranslator/blob/master/CONTRIBUTING.md) for details.
+
+
 ## Credits
 
 - [funivan](https://github.com/funivan)
