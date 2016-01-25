@@ -13,7 +13,7 @@
     }
   ],
   "require": {
-    "php": ">=5.5.0",
+    "php": ">=5.6",
     "xparse/expression-translator": "0.0.3",
     "symfony/css-selector": "^3.0"
   },
