@@ -1,6 +1,7 @@
 # CssExpressionTranslator
 
 [![Packagist](https://img.shields.io/packagist/v/xparse/css-expression-translator.svg)](https://packagist.org/packages/xparse/css-expression-translator)
+[![Travis](https://img.shields.io/travis/v/xparse/css-expression-translator.svg)](https://travis-ci.org/xparse/CssExpressionTranslator)
 [![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE.md)
 [![Total Downloads](https://img.shields.io/packagist/dt/xparse/css-expression-translator.svg?style=flat-square)](https://packagist.org/packages/xparse/css-expression-translator)
 
