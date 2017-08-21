@@ -2,7 +2,7 @@ language: php
 env:
   - COVERAGE=on
   - COVERAGE=off
-  matrix:
+matrix:
   fast_finish: true
   exclude:
     - php: 7.0
