@@ -2,10 +2,12 @@
 
   namespace Xparse\CssExpressionTranslator\Test;
 
+  use PHPUnit\Framework\TestCase;
+
   /**
    * @author Ivan Shcherbak <dev@funivan.com> 02.12.15
    */
-  class CssExpressionTranslatorTest extends \PHPUnit_Framework_TestCase {
+  class CssExpressionTranslatorTest extends TestCase {
 
     /**
      * @return array

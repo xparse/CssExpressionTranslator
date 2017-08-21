@@ -2,12 +2,13 @@
 
   namespace Tests\Atl\Http\Parser;
 
+  use PHPUnit\Framework\TestCase;
   use Xparse\CssExpressionTranslator\CssOrXpathExpressionTranslator;
 
   /**
    *
    */
-  class CssOrXpathExpressionTranslatorTest extends \PHPUnit_Framework_TestCase {
+  class CssOrXpathExpressionTranslatorTest extends TestCase {
 
     /**
      * @var CssOrXpathExpressionTranslator
@@ -110,14 +111,6 @@
     public function testQueries($input, $expect) {
       $output = $this->converter->convertToXpath($input);
       static::assertEquals($expect, $output);
-    }
-
-
-    /**
-     * @expectedException \InvalidArgumentException
-     */
-    public function testInvalidDataType() {
-      $this->converter->convertToXpath([]);
     }
 
 
