@@ -75,6 +75,10 @@
           'descendant-or-self::a/text()',
         ],
         [
+          '       a text(), a @href, img @src',
+          'descendant-or-self::a/text() | descendant-or-self::a/@href | descendant-or-self::img/@src',
+        ],
+        [
           'a @href',
           'descendant-or-self::a/@href',
         ],

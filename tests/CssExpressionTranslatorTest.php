@@ -16,6 +16,7 @@
         ['a @a', 'descendant-or-self::a/@a'],
         ['a text()', 'descendant-or-self::a/text()'],
         ['a.foo @href', "descendant-or-self::a[@class and contains(concat(' ', normalize-space(@class), ' '), ' foo ')]/@href"],
+        ['a.foo @href, b.bar @href', "descendant-or-self::a[@class and contains(concat(' ', normalize-space(@class), ' '), ' foo ')]/@href | descendant-or-self::b[@class and contains(concat(' ', normalize-space(@class), ' '), ' bar ')]/@href"],
       ];
     }
 
