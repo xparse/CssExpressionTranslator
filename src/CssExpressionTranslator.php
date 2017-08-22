@@ -12,16 +12,20 @@
   class CssExpressionTranslator extends CssSelectorConverter implements ExpressionTranslatorInterface {
 
     /**
-     * @param string $cssExpr
+     * @param string $cssExpression
      * @return string
      */
-    public function convertToXpath($cssExpr) {
-      preg_match('!(.+) (@.+|.+\(\))$!', $cssExpr, $data);
-      if (empty($data[2])) {
-        return parent::toXPath($cssExpr);
+    public function convertToXpath($cssExpression) {
+      $xpathExpression = [];
+      foreach (explode(', ', $cssExpression) as $expression) {
+        preg_match('!(.+) (@.+|.+\(\))$!', $expression, $matchExpression);
+        if (!array_key_exists(2, $matchExpression)) {
+          $xpathExpression[] = parent::toXPath($expression);
+        } else {
+          $xpathExpression[] = parent::toXPath($matchExpression[1]) . '/' . $matchExpression[2];
+        }
       }
-
-      return parent::toXPath($data[1]) . '/' . $data[2];
+      return implode(' | ', $xpathExpression);
     }
 
 
