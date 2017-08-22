@@ -4,20 +4,20 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "d32af8949721bacfbf4ccd53ff78bdd5",
+    "content-hash": "ea42023616ffa5749cb4940c6c99a298",
     "packages": [
         {
             "name": "symfony/css-selector",
-            "version": "v3.0.0",
+            "version": "v3.3.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/css-selector.git",
-                "reference": "2563cd23b8822eac1b2a4a47d99de160b58492c1"
+                "reference": "4d882dced7b995d5274293039370148e291808f2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/css-selector/zipball/2563cd23b8822eac1b2a4a47d99de160b58492c1",
-                "reference": "2563cd23b8822eac1b2a4a47d99de160b58492c1",
+                "url": "https://api.github.com/repos/symfony/css-selector/zipball/4d882dced7b995d5274293039370148e291808f2",
+                "reference": "4d882dced7b995d5274293039370148e291808f2",
                 "shasum": ""
             },
             "require": {
@@ -26,7 +26,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "3.0-dev"
+                    "dev-master": "3.3-dev"
                 }
             },
             "autoload": {
@@ -57,7 +57,7 @@
             ],
             "description": "Symfony CssSelector Component",
             "homepage": "https://symfony.com",
-            "time": "2015-10-30T23:35:59+00:00"
+            "time": "2017-05-01T15:01:29+00:00"
         },
         {
             "name": "xparse/expression-translator",
