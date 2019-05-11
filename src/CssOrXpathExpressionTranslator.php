@@ -1,4 +1,6 @@
-<?
+<?php
+
+declare(strict_types=1);
 
 namespace Xparse\CssExpressionTranslator;
 
@@ -6,6 +8,8 @@ use Xparse\ExpressionTranslator\ExpressionTranslatorInterface;
 
 /**
  * Automatically detect xpath or css query language and convert it to the xpath
+ *
+ * @author Ivan Shcherbak <alotofall@gmail.com>
  */
 class CssOrXpathExpressionTranslator implements ExpressionTranslatorInterface
 {
@@ -41,11 +45,8 @@ class CssOrXpathExpressionTranslator implements ExpressionTranslatorInterface
 
     public function convertToXpath(string $expression): string
     {
-        if (!is_string($expression)) {
-            throw new \InvalidArgumentException('Expect expression to be the type of string. Given: ' . gettype($expression));
-        }
         $expression = trim($expression);
-        if (empty($expression)) {
+        if ($expression === '') {
             throw new \InvalidArgumentException('Expect not empty expression');
         }
         if ($expression === '.') {
