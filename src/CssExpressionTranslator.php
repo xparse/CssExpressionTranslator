@@ -12,7 +12,7 @@ use Xparse\ExpressionTranslator\ExpressionTranslatorInterface;
 class CssExpressionTranslator extends CssSelectorConverter implements ExpressionTranslatorInterface
 {
 
-    public function convertToXpath(string $expression): string
+    final public function convertToXpath(string $expression): string
     {
         $xpathExpression = [];
         foreach (explode(', ', $expression) as $part) {
