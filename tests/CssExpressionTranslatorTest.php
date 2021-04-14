@@ -13,7 +13,7 @@ class CssExpressionTranslatorTest extends TestCase
 {
 
     /**
-     * @return array
+     * @return string[][]
      */
     final public function getConvertWithAttributesDataProvider(): array
     {
