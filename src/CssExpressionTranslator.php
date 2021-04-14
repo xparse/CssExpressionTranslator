@@ -18,9 +18,9 @@ class CssExpressionTranslator extends CssSelectorConverter implements Expression
         foreach (explode(', ', $expression) as $part) {
             preg_match('!(.+) (@.+|.+\(\))$!', $part, $matchExpression);
             if (!array_key_exists(2, $matchExpression)) {
-                $xpathExpression[] = parent::toXPath($part);
+                $xpathExpression[] = $this->toXPath($part);
             } else {
-                $xpathExpression[] = parent::toXPath($matchExpression[1]) . '/' . $matchExpression[2];
+                $xpathExpression[] = $this->toXPath($matchExpression[1]) . '/' . $matchExpression[2];
             }
         }
         return implode(' | ', $xpathExpression);
