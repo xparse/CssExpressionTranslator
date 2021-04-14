@@ -43,7 +43,7 @@ class CssOrXpathExpressionTranslator implements ExpressionTranslatorInterface
     }
 
 
-    final public function convertToXpath(string $expression): string
+    public function convertToXpath(string $expression): string
     {
         $expression = trim($expression);
         if ($expression === '') {
