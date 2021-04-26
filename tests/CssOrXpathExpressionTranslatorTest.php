@@ -3,6 +3,7 @@ declare(strict_types=1);
 
 namespace Xparse\CssExpressionTranslator\Test;
 
+use InvalidArgumentException;
 use PHPUnit\Framework\TestCase;
 use Xparse\CssExpressionTranslator\CssOrXpathExpressionTranslator;
 
@@ -103,14 +104,14 @@ final class CssOrXpathExpressionTranslatorTest extends TestCase
 
     public function testEmptyString(): void
     {
-        $this->expectException(\InvalidArgumentException::class);
+        self::expectException(InvalidArgumentException::class);
         CssOrXpathExpressionTranslator::getTranslator()->convertToXpath('');
     }
 
 
     public function testEmptyStringWithSpaces(): void
     {
-        $this->expectException(\InvalidArgumentException::class);
+        self::expectException(InvalidArgumentException::class);
         CssOrXpathExpressionTranslator::getTranslator()->convertToXpath('     ');
     }
 
