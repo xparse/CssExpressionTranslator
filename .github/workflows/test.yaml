@@ -7,7 +7,8 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        php-versions: ['7.2', '7.3', '7.4']
+        php-versions: ['7.3', '7.4', '8.0']
+        package-stability: ['stable', 'alpha']
     name: PHP ${{ matrix.php-versions }}
     steps:
       - name: Checkout
@@ -28,6 +29,9 @@ jobs:
           key: ${{ runner.os }}-composer-${{ hashFiles('**/composer.lock') }}
           restore-keys: |
             ${{ runner.os }}-composer-
+
+      - name: Configure stability
+        run: composer config minimum-stability ${{ matrix.package-stability }}
       - name: Install dependencies
         run: composer install --prefer-dist --dev
 

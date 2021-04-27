@@ -1,8 +1,9 @@
 <?php
 declare(strict_types=1);
 
-namespace Tests\Atl\Http\Parser;
+namespace Xparse\CssExpressionTranslator\Test;
 
+use InvalidArgumentException;
 use PHPUnit\Framework\TestCase;
 use Xparse\CssExpressionTranslator\CssOrXpathExpressionTranslator;
 
@@ -13,7 +14,7 @@ final class CssOrXpathExpressionTranslatorTest extends TestCase
 {
 
     /**
-     * @return array
+     * @return string[][]
      */
     public function getQueriesDataProvider(): array
     {
@@ -97,26 +98,20 @@ final class CssOrXpathExpressionTranslatorTest extends TestCase
     {
         $output = CssOrXpathExpressionTranslator::getTranslator()
             ->convertToXpath($input);
-        static::assertEquals($expect, $output);
+        self::assertEquals($expect, $output);
     }
 
 
-    /**
-     * @expectedException \InvalidArgumentException
-     */
     public function testEmptyString(): void
     {
-        /** @noinspection UnusedFunctionResultInspection */
+        self::expectException(InvalidArgumentException::class);
         CssOrXpathExpressionTranslator::getTranslator()->convertToXpath('');
     }
 
 
-    /**
-     * @expectedException \InvalidArgumentException
-     */
     public function testEmptyStringWithSpaces(): void
     {
-        /** @noinspection UnusedFunctionResultInspection */
+        self::expectException(InvalidArgumentException::class);
         CssOrXpathExpressionTranslator::getTranslator()->convertToXpath('     ');
     }
 
