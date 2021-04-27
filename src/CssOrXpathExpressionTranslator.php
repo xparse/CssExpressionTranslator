@@ -15,7 +15,7 @@ class CssOrXpathExpressionTranslator implements ExpressionTranslatorInterface
 {
 
     /**
-     * @var ExpressionTranslatorInterface
+     * @var ?ExpressionTranslatorInterface
      */
     private static $translator;
 

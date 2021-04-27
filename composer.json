@@ -2,23 +2,23 @@
   "name": "xparse/css-expression-translator",
   "description": "Translate css to xpath",
   "keywords": [],
-  "homepage": "https://github.com/",
+  "homepage": "https://github.com/xparse/CssExpressionTranslator",
   "license": "MIT",
   "authors": [
     {
-      "name": "funivan",
-      "email": "dev@funivan.com",
+      "name": "Ivan Shcherbak @funivan",
+      "email": "alotofall@gmail.com",
       "homepage": "http://funivan.com",
       "role": "Developer"
     }
   ],
   "require": {
-    "php": ">=7.1",
-    "xparse/expression-translator": "0.0.*",
-    "symfony/css-selector": "^3.0"
+    "php": "^7.1 || ^8.0",
+    "symfony/css-selector": "^3.0",
+    "xparse/expression-translator": "0.0.*"
   },
   "require-dev": {
-    "phpunit/phpunit": "^7.0"
+    "phpunit/phpunit": "^9.3"
   },
   "autoload": {
     "psr-4": {
