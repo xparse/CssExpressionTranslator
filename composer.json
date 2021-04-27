@@ -15,7 +15,7 @@
   "require": {
     "php": "^7.3 || ^8.0",
     "symfony/css-selector": "^3.0",
-    "xparse/expression-translator": "0.0.*@alpha"
+    "xparse/expression-translator": "0.0.*"
   },
   "require-dev": {
     "phpunit/phpunit": "^9.3"
